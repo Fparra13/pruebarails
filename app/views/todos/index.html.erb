@@ -1,0 +1,22 @@
+
+<div class="well">
+	<table class="table">
+    
+	<th>DESCRIPTION</th>
+    <th>COMPLETED</th>
+
+	<% @todos.each do |todo| %>
+	<tr>
+		 <td><%= todo.description %></td>
+		 <td><%= todo.completed %></td>
+		 <td><%= link_to "Mostrar", todo, class: "btn btn-primary" %></td>
+		 <td><%= link_to "Editar", edit_path(todo), class: "btn btn-info" %></td>
+		 <td><%= link_to "Complete", complete_path(todo), class: "btn btn-success" %></td>
+		 <td><%= link_to "Borrar", todo, method: :delete, data: { confirm: 'Estas Seguro?' }, class: "btn btn-danger"  %></td>
+	</tr>
+	<% end %>
+	</table>
+	<%= link_to "Crear", todos_new_path, class: "btn btn-primary btn-block" %>
+</div>
+
+                

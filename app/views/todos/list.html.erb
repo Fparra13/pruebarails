@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-6">
+  	<h2>COMPLETADOS</h2>
+  	  <table class="table table-sm">
+			<tr>
+		    <th>Description</th>
+		    <th>Completed</br></th>
+		  </tr >
+  	<% @completados.each do |notodo| %>
+  	<tr>
+		 <td><%= notodo.description %></td>
+		 <td><%= notodo.completed %></td>
+		 </tr >
+		
+	<% end %>
+	</table>
+  </div>
+    <div class="col-md-6">
+  	<h2> NO COMPLETADOS</h2>
+  	  <table class="table table-sm">
+			<tr>
+		    <th>Description</th>
+		    <th>Completed</br></th>
+		  </tr >
+  	<% @no_completados.each do |todo| %>
+  	<tr>
+		 <td><%= todo.description %></td>
+		 <td><%= todo.completed %></td>
+		 </tr >
+		
+	<% end %>
+	</table>
+  </div>
+</div>
